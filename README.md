@@ -54,3 +54,12 @@ You can use the [usd demo file](./isaac_lidar_sample_moving_cube.usd), or create
 - `IP Address` (string): The IP address to send the data to
 - `Port` (int): The port to send the data to (also used in Cirrus)
 - `Broadcast` (bool): Check to property if the IP Address is a broadcast address
+
+### Building the C++ extension
+As the extension is written in C++ for performance reasons, developers need to build it before using it. Most of it works in the same way as the official Omniverse C++ examples (https://github.com/NVIDIA-Omniverse/kit-extension-template-cpp).
+
+The first step is to run the build.bat file at the root of the repo. It will generate the actual extension files usable by Omniverse, as well as the Visual Studio files. It is recommended to work in Visual Studio (2019 and above) for C++, although VSCode should also work. The build.bat script generates the VS2019 .sln files in _compiler\vs2019\kit-extension-template-cpp.sln . It should work as-is. Do not upgrade the compiler and Windows SDK versions if asked to do so, and install the correct Windows SDK for the VS Installer if it is missing on your machine.
+
+Unlike the samples, we do not recommend running the project by launching it via Visual Studio, since the extension is made specifically for Isaac Sim, and Visual Studio doesnt launch it within an Isaac Sim environment. It is recommended to run Isaac and attach the VS debugger to it by going to Debug -> Attach to Process and selecting the kit.exe coresponding to Isaac. One thing to note is that the symbols for the extension will only be loaded IF the extension is enabled after attaching. If the extension is already enabled, disabling then enabling it will also work. Also, to update the extension in Isaac after doing some changes and building, it needs to be disabled and enabled again (The extension willl probably fail to build if it is in use as the dll cannot be overwritten anyways).
+
+To add the extension to Isaac, simply add the built plugin folder (c:/git/omniverse/omniverse-lidar-synthetic-data/_build/windows-x86_64/release/exts or c:/git/omniverse/omniverse-lidar-synthetic-data/_build/windows-x86_64/debug/exts for a debug build) to the extension manager paths
