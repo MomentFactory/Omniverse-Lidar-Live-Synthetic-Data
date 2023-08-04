@@ -2,8 +2,12 @@
     "BeamToOusterUDPNode": {
         "version": 1,
         "description": "Receives beam data from Isaac Lidar and send it via the Ouster UDP protocol",
+        "language": "Python",
         "metadata": {
             "uiName": "Beam to Ouster UDP"
+        },
+        "state": {
+            "$comment": "The existence of this state section, even if it contains no attributes, means there is internal state that is entirely managed by the node"
         },
         "inputs": {
             "execIn": {
