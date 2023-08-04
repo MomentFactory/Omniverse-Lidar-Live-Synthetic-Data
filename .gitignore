@@ -17,9 +17,3 @@ PACKAGE-DEPS.yaml
 # Internal CI/CD files.
 /.teamcity
 /tools/ci
-
-# Custom
-**/ogn/nodes/
-**/ogn/docs/
-**/ogn/tests/
-**/ogn/*Database.py
