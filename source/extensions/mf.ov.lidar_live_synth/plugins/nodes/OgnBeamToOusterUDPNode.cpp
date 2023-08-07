@@ -143,8 +143,6 @@ class OgnBeamToOusterUDPNode
                 return false;
             }
 
-            //Sleep(1);
-
             return true;
         }
     private:
@@ -259,14 +257,6 @@ class OgnBeamToOusterUDPNode
 public:
     static bool compute(OgnBeamToOusterUDPNodeDatabase& db)
     {
-        // Compute the outputs from the current input
-        //static int test = 0;
-        //test++;
-        //if (test % 30 != 0)
-        //{
-        //    return true;
-        //}
-
         auto& state = db.internalState<OgnBeamToOusterUDPNode>();
         const int& numRows = db.inputs.numRows();
 

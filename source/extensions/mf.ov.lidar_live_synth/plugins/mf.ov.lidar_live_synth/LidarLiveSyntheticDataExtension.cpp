@@ -32,14 +32,12 @@ class LidarLiveSyntheticDataExtension : public omni::ext::IExt
 public:
     void onStartup(const char* extId) override
     {
-        printf("LidarLiveSyntheticDataExtension starting up (ext_id: %s).\n", extId);
         // This macro walks the list of pending node type definitions and registers them with OmniGraph
         INITIALIZE_OGN_NODES()
     }
 
     void onShutdown() override
     {
-        printf("LidarLiveSyntheticDataExtension shutting down.\n");
         // This macro walks the list of registered node type definitions and deregisters all of them. This is required
         // for hot reload to work.
         RELEASE_OGN_NODES()
