@@ -8,7 +8,7 @@
 import_configs = ["${root}/_repo/deps/repo_kit_tools/kit-template/repo.toml"]
 
 # Repository Name
-name = "kit-extension-template-cpp"
+name = "omniverse-lidar-live-synthetic-data"
 
 [repo_build.licensing]
 enabled = false
@@ -17,8 +17,8 @@ enabled = false
 vs_version = "vs2019"
 
 [repo_docs]
-name = "Kit Extension Template C++"
-project = "kit-extension-template-cpp"
+name = "MF Lidar live synthetic data"
+project = "omniverse-lidar-live-synthetic-data"
 sphinx_exclude_patterns = [
     "_build",
     "tools",
@@ -29,16 +29,7 @@ sphinx_exclude_patterns = [
 
 [repo_docs.kit]
 extensions = [
-    "omni.example.cpp.actions",
-    "omni.example.cpp.commands",
-    "omni.example.cpp.hello_world",
-    "omni.example.cpp.omnigraph_node",
-    "omni.example.cpp.pybind",
-    "omni.example.cpp.ui_widget",
-    "omni.example.cpp.usd",
-    "omni.example.cpp.usd_physics",
-    "omni.example.python.hello_world",
-    "omni.example.python.ui",
+    "mf.ov.lidar_live_synth"
 ]
 
 [repo_package.packages."platform:windows-x86_64".docs]
