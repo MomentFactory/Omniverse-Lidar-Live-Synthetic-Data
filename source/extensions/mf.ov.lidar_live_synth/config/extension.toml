@@ -1,5 +1,5 @@
 [package]
-version = "0.1.2"
+version = "0.1.3"
 
 title = "MF Lidar live synthetic data"
 description = "Send real-time Lidar synthetic point cloud data from Omniverse to third party software."
