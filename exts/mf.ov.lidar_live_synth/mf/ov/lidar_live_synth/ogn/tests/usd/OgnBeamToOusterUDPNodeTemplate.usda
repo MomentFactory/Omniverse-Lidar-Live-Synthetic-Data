@@ -1,0 +1,55 @@
+#usda 1.0
+(
+    doc ="""Generated from node description file OgnBeamToOusterUDPNode.ogn
+Contains templates for node types found in that file."""
+)
+
+def OmniGraph "TestGraph"
+{
+    token evaluator:type = "push"
+    int2 fileFormatVersion = (1, 3)
+    token flatCacheBacking = "Shared"
+    token pipelineStage = "pipelineStageSimulation"
+
+    def OmniGraphNode "Template_mf_ov_lidar_live_synth_BeamToOusterUDPNode" (
+        docs="""Receives beam data from Isaac Lidar and send it via the Ouster UDP protocol"""
+    )
+    {
+        token node:type = "mf.ov.lidar_live_synth.BeamToOusterUDPNode"
+        int node:typeVersion = 1
+
+        # 9 attributes
+        custom float2 inputs:azimuthRange = (-3.14159, 3.14159) (
+            docs="""The azimuth range [min, max]"""
+        )
+        custom bool inputs:broadcast = false (
+            docs="""Whether the IP address is a broadcast address or not"""
+        )
+        custom uint inputs:execIn = 0 (
+            docs="""Execution"""
+        )
+        custom float inputs:horizontalResolution = 2 (
+            docs="""Degrees in between rays for horizontal axis"""
+        )
+        custom string inputs:ip_address = "127.0.0.1" (
+            docs="""The message destination IP address"""
+        )
+        custom float[] inputs:linearDepthData = [] (
+            docs="""Buffer array containing linear depth data"""
+        )
+        custom int inputs:numCols = 1 (
+            docs="""Number of columns in buffers"""
+        )
+        custom int inputs:numRows = 1 (
+            docs="""Number of rows in buffers"""
+        )
+        custom int inputs:port = 8037 (
+            docs="""The port to which to send the data to"""
+        )
+
+        # 1 attribute
+        custom uint outputs:execOut (
+            docs="""Output execution triggers when the data has been sent"""
+        )
+    }
+}
