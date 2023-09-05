@@ -19,7 +19,7 @@ JSON config files that describe the angles of the beams for an external applicat
 
 Requires Isaac Sim as well as a third party software that can connect to Lidar sensors.
 
-You can use the [usd demo file](./isaac_lidar_sample_moving_cube.usd), or create your own following the instructions below.
+You can use the [isaac_lidar_sample_moving_cube.usd](./isaac_lidar_sample_moving_cube.usd), or [isaac_lidar_ouster_sample.usd](./isaac_lidar_ouster_sample.usd), or create your own following the instructions below.
 
 ### In Isaac Sim:
 1. Activate the MF LIDAR LIVE SYNTHETIC DATA extension
