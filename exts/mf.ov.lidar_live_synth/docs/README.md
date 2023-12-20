@@ -3,8 +3,9 @@
 Adds an Action Graph Node ("Generic/Beam to Ouster UDP") to send Isaac beam data via the Ouster(tm) UDP procotol.
 This will allow any third party software implementing supporting Ouster(tm) lidars to be connected to simulated sensors instead of physical sensors.
 
-It is developped for kit 104.2 and currently working only in Isaac Sim. 
-This extensions only provide pre-built binaries for x86_64, for Linux version you may want to compile from the [source code](https://github.com/MomentFactory/Omniverse-Lidar-Live-Synthetic-Data) 
+It is developped for kit 105 and currently working only in Isaac Sim >2023.1.0 . 
+This extensions only provide pre-built binaries for x86_64 and for Linux x86_64.version 
+If you want to compile the extenstion from the [source code](https://github.com/MomentFactory/Omniverse-Lidar-Live-Synthetic-Data) 
 
 All the data inputs from the node should be plugged in from a "Isaac Read Lidar Beams Node".
 
