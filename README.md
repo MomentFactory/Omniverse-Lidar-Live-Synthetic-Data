@@ -5,7 +5,7 @@ This will allow any third party software implementing supporting Ouster(tm) lida
 
 All the data inputs from the node should be plugged in from a "Isaac Read Lidar Beams Node".
 
-## Requirements 
+## Requirements
 - kit 105 based
 - Isaac Sim > 2023.1.0
 - Linux or Windows platforms.
@@ -24,7 +24,7 @@ JSON config files that describe the angles of the beams for an external applicat
 
 Requires Isaac Sim as well as a third party software that can connect to Lidar sensors.
 
-You can use the [isaac_lidar_sample_moving_cube.usd](./isaac_lidar_sample_moving_cube.usd), or [isaac_lidar_ouster_sample.usd](./isaac_lidar_ouster_sample.usd), or create your own following the instructions below.
+You can use the [isaac_lidar_sample_moving_cube.usd](exts/mf.ov.lidar_live_synth/samples/isaac_lidar_sample_moving_cube.usd), or [isaac_lidar_ouster_sample.usd](exts/mf.ov.lidar_live_synth/samples//isaac_lidar_ouster_sample.usd), or create your own following the instructions below.
 
 ### In Isaac Sim:
 1. Activate the MF LIDAR LIVE SYNTHETIC DATA extension
@@ -71,5 +71,5 @@ To add the extension to Isaac, simply add the built plugin folder (c:/git/omnive
 
 ### Building for Linux
 
-Install Docker
-Run ./build.sh
+- Install Docker
+- Run `./build.sh`
