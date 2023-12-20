@@ -26,3 +26,10 @@ pages = [
     "docs/README.md",
     "docs/CHANGELOG.md",
 ]
+
+[package.target]
+kit = ["105.1"]
+
+[package.writeTarget]
+kit = true
+python = false
