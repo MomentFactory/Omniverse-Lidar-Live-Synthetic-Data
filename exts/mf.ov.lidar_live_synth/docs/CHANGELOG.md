@@ -3,7 +3,7 @@
 ## [0.2.0] - 2023-12-20
 
 ### Modified
-- adapted for compatibility with kit 105
+- Adapted for compatibility with kit 105
 
 ### Added
 - Linux support thanks to [@Samahu](https://github.com/Samahu)'s PR on Github
