@@ -6,7 +6,7 @@
 - adapted for compatibility with kit 105
 
 ### Added
-- Linux support thans to @Samahu's PR on Github
+- Linux support thanks to [@Samahu](https://github.com/Samahu)'s PR on Github
 
 ## [0.1.3] - 2023-08-30
 
