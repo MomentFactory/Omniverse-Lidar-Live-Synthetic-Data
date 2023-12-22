@@ -18,13 +18,13 @@ The Lidar must have 16, 32, 64 or 128 rows to be supported by the procotol.
 
 Lidar FOVs and resolutions are not transmitted in the protocol and therefore should match those of an actual Ouster(tm) model (22.5, 45 or 90 degrees FOV) for an accurate reconstruction by the receiving software.
 
-JSON config files that describe the angles of the beams for an external application are included in the 'data' folder (example : [OusterJsonConfigOmniverse-OS0-16.json](exts/mf.ov.lidar_live_synth/data/OusterJsonConfigOmniverse-OS0-16.json)). These files can be used in Cirrus as the Ouster(tm) Json Config file to properly recronstruct the data with the correct beam angles. OS0 are 90 degrees FOV, OS1 are 45 and OS2 are 22.5.
+JSON config files that describe the angles of the beams for an external application are included in the 'data' folder (example : [OusterJsonConfigOmniverse-OS0-16.json](source/extensions/mf.ov.lidar_live_synth/data/OusterJsonConfigOmniverse-OS0-16.json)). These files can be used in Cirrus as the Ouster(tm) Json Config file to properly recronstruct the data with the correct beam angles. OS0 are 90 degrees FOV, OS1 are 45 and OS2 are 22.5.
 
 ## How to use
 
 Requires Isaac Sim as well as a third party software that can connect to Lidar sensors.
 
-You can use the [isaac_lidar_sample_moving_cube.usd](exts/mf.ov.lidar_live_synth/samples/isaac_lidar_sample_moving_cube.usd), or [isaac_lidar_ouster_sample.usd](exts/mf.ov.lidar_live_synth/samples//isaac_lidar_ouster_sample.usd), or create your own following the instructions below.
+You can use the [isaac_lidar_sample_moving_cube.usd](source/extensions/mf.ov.lidar_live_synth/samples/isaac_lidar_sample_moving_cube.usd), or [isaac_lidar_ouster_sample.usd](source/extensions/mf.ov.lidar_live_synth/samples//isaac_lidar_ouster_sample.usd), or create your own following the instructions below.
 
 ### In Isaac Sim:
 1. Activate the MF LIDAR LIVE SYNTHETIC DATA extension
