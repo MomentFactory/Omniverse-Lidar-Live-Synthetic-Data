@@ -4,7 +4,22 @@
 
 #define WIN32_LEAN_AND_MEAN
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
-#include <winsock2.h>
+#ifdef _WIN32
+#include <Winsock2.h>
+#else
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#define SOCKET int
+#define INVALID_SOCKET  (SOCKET)(~0)
+#define SOCKET_ERROR            (-1)
+#define closesocket close
+#define SOCKADDR sockaddr
+#endif
+
 
 namespace mf {
 namespace ov {
@@ -222,7 +237,7 @@ class OgnBeamToOusterUDPNode
 
                 currentChunkColumn++;
             }
-             
+
             if (currentChunkColumn != 0)
             {
                 for (int extraColumnIndex = currentChunkColumn; extraColumnIndex < kColumnsPerPacket; extraColumnIndex++)
@@ -257,7 +272,8 @@ class OgnBeamToOusterUDPNode
 public:
     static bool compute(OgnBeamToOusterUDPNodeDatabase& db)
     {
-        auto& state = db.internalState<OgnBeamToOusterUDPNode>();
+        // TODO: why is state declared here
+        // auto& state = db.internalState<OgnBeamToOusterUDPNode>();
         const int& numRows = db.inputs.numRows();
 
         switch (numRows)

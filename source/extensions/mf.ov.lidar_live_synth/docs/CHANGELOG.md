@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.0] - 2023-12-20
+
+### Modified
+- Adapted for compatibility with kit 105
+- Enhanced documentation
+
+### Added
+- Linux support thanks to [@Samahu](https://github.com/Samahu)'s PR on Github
+
 ## [0.1.3] - 2023-08-30
 
 ### Changed

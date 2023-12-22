@@ -1,5 +1,5 @@
 [package]
-version = "0.1.3"
+version = "0.2.0"
 
 title = "MF Lidar live synthetic data"
 description = "Send real-time Lidar synthetic point cloud data from Omniverse to third party software."
@@ -26,3 +26,10 @@ pages = [
     "docs/README.md",
     "docs/CHANGELOG.md",
 ]
+
+[package.target]
+kit = ["105.1"]
+
+[package.writeTarget]
+kit = true
+python = false
