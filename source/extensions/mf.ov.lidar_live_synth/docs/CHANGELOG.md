@@ -4,6 +4,7 @@
 
 ### Modified
 - Adapted for compatibility with kit 105
+- Enhanced documentation
 
 ### Added
 - Linux support thanks to [@Samahu](https://github.com/Samahu)'s PR on Github
